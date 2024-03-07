@@ -1,7 +1,7 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import DriversScreen from '../screens/DriversScreen';
-import DriverDetails from '../screens/DriverDetails';
+import DriverDetails from '../screens/DriverDetail';
 
 const DriverStack = createNativeStackNavigator();
 
