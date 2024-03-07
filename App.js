@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
-import MenuTabs from './src/navigation/MenuTabs';
+import MenuTabs from './navigation/MenuTabs';
 
 export default function App() {
   return (
