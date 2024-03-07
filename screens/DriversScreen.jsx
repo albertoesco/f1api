@@ -30,7 +30,7 @@ const DriversScreen = () => {
                 data={drivers}
                 renderItem={({ item }) => (
                     <TouchableOpacity
-                        onPress={() => navigation.navigate('DriverDetails', { item: item })}
+                        onPress={() => navigation.navigate('DriverDetail', { item: item })}
                     >
                         <DriverCard key={item.id} item={item} />
                     </TouchableOpacity>
