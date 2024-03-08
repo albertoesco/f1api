@@ -14,15 +14,12 @@ const DriversScreen = () => {
     const getDrivers = () => {
         getDriversByNumber()
             .then(json => {
-                setDrivers(prevDrivers => [...prevDrivers, json.results]);
-                setTotalDrivers(json.info.count);
+                const nuevosDrivers = json.filter(newDriver => !drivers.some(driver => driver.id === newDriver.id));
+                setDrivers(prevDrivers => [...prevDrivers, ...nuevosDrivers]);
+                setTotalDrivers(json);
             })
             .catch(error => console.log("error", error));
     }
-
-    const handleSearchTermChange = (text) => {
-        setSearchTerm(text);
-    };
 
     useEffect(() => {
         getDrivers();
@@ -37,7 +34,7 @@ const DriversScreen = () => {
                     <TouchableOpacity
                         onPress={() => navigation.navigate('DriverDetail', { item: item })}
                     >
-                        <DriverCard key={item.id} item={item} />
+                        <DriverCard key={item.driver_number} item={item} />
                     </TouchableOpacity>
                 )}
                 onEndReachedThreshold={0}
@@ -54,35 +51,35 @@ const DriversScreen = () => {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     list: {
-      flex: 1,
-      width: "100%",
-      padding: 10,
-      marginTop: 10
+        flex: 1,
+        width: "100%",
+        padding: 10,
+        marginTop: 10
     },
     image: {
-      width: 80,
-      height: 80
+        width: 80,
+        height: 80
     },
     row: {
-      flex: 1,
-      flexDirection: "row",
-      margin: 10
+        flex: 1,
+        flexDirection: "row",
+        margin: 10
     },
     column: {
-      flex: 1,
-      flexDirection: "column",
-      justifyContent: "flex-start"
+        flex: 1,
+        flexDirection: "column",
+        justifyContent: "flex-start"
     },
     text: {
-      fontSize: 18
+        fontSize: 18
     }
-  });
-  
-  
+});
+
+
 export default DriversScreen;

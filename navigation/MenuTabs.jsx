@@ -18,6 +18,7 @@ export default function Navigation() {
                     ),
                     headerShown: false
                 }} />
+
         </Tab.Navigator>
     );
 }

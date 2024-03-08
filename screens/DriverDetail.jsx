@@ -17,4 +17,22 @@ export default function DriverDetail({ route }) {
     );
 }
 
-
+const styles = StyleSheet.create({
+    image: {
+      width: 300,
+      height: 300
+    },
+    row: {
+      flex: 1,
+      flexDirection: "row",
+      margin: 10
+    },
+    column: {
+      flex: 1,
+      flexDirection: "column",
+      margin: 20
+    },
+    text: {
+      fontSize: 18
+    }
+  });
