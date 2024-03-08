@@ -1,9 +1,12 @@
+import React from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import StackDriver from './StackDriver';
-const Tab = createBottomTabNavigator();
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-export default function MenuTabs() {
+
+const Tab = createBottomTabNavigator();//menu naegacion
+
+export default function Navigation() {
     return (
         <Tab.Navigator>
             <Tab.Screen
@@ -11,7 +14,7 @@ export default function MenuTabs() {
                 component={StackDriver}
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons name="account" size={size} color={color} />
+                        <MaterialCommunityIcons name="drivers" size={size} color={color} />
                     ),
                     headerShown: false
                 }} />
