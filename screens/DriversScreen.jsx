@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React, { useState, useEffect } from 'react';
-import { View, FlatList, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, FlatList, TouchableOpacity } from 'react-native';
 import { getDriversByNumber } from '../services/f1api';
 import DriverCard from '../components/DriverCard';
 
@@ -52,4 +52,37 @@ const DriversScreen = () => {
     );
 }
 
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    list: {
+      flex: 1,
+      width: "100%",
+      padding: 10,
+      marginTop: 10
+    },
+    image: {
+      width: 80,
+      height: 80
+    },
+    row: {
+      flex: 1,
+      flexDirection: "row",
+      margin: 10
+    },
+    column: {
+      flex: 1,
+      flexDirection: "column",
+      justifyContent: "flex-start"
+    },
+    text: {
+      fontSize: 18
+    }
+  });
+  
+  
 export default DriversScreen;

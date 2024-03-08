@@ -17,20 +17,21 @@ export default function DriverCard({ item }) {
 
 const styles = StyleSheet.create({
     image: {
-        width: 80,
-        height: 80
+      width: 80,
+      height: 80
     },
     row: {
-        flex: 1,
-        flexDirection: "row",
-        margin: 10
+      flex: 1,
+      flexDirection: "row",
+      margin: 10
     },
     column: {
-        flex: 1,
-        flexDirection: "column",
-        justifyContent: "flex-start"
+      flex: 1,
+      flexDirection: "column",
+      justifyContent: "flex-start"
     },
     text: {
-        fontSize: 18
+      fontSize: 18
     }
-});
+  });
+  

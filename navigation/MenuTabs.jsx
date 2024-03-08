@@ -4,7 +4,7 @@ import StackDriver from './StackDriver';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
-const Tab = createBottomTabNavigator();//menu naegacion
+const Tab = createBottomTabNavigator();//menu negacion
 
 export default function Navigation() {
     return (
