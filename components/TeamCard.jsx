@@ -1,8 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
-import TeamCard from '../components/TeamCard';
 
-
+const TeamCard = () => {
+    return (
+        <View style={styles.card}>
+            <Image source={require('../img/alpine.png')} style={styles.imageStyle} />
+            <Text style={styles.content}>ALPINE</Text>
+        </View>
+    );
+};
 
 const styles = StyleSheet.create({
     card: {
@@ -25,4 +31,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default DriverCard;
+export default TeamCard;

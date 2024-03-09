@@ -1,6 +1,7 @@
 import React from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import StackDriver from './StackDriver';
+import StackDriver from './Stacks';
+import StackTeam from './Stacks';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
@@ -14,16 +15,16 @@ export default function Navigation() {
                 component={StackDriver}
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons name="drivers" size={size} color={color} />
+                        <MaterialCommunityIcons name="racing-helmet" size={24} color="black" />
                     ),
                     headerShown: false
                 }} />
-                <Tab.Screen
+            <Tab.Screen
                 name="Teams"
-                component={StackDriver}
+                component={StackTeam}
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons name="teams" size={size} color={color} />
+                        <MaterialCommunityIcons name="car-hatchback" size={24} color="black" />
                     ),
                     headerShown: false
                 }} />
