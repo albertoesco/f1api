@@ -20,7 +20,7 @@ export default function Navigation() {
                     headerShown: false
                 }} />
             <Tab.Screen
-                name="Settings"
+                name="Gallery"
                 component={SettingsScreen}
                 options={{
                     tabBarIcon: ({ color, size }) => (
