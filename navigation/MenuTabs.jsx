@@ -4,7 +4,7 @@ import StackDriver from './StackDriver';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
-const Tab = createBottomTabNavigator();//menu negacion
+const Tab = createBottomTabNavigator();
 
 export default function Navigation() {
     return (
@@ -15,6 +15,15 @@ export default function Navigation() {
                 options={{
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="drivers" size={size} color={color} />
+                    ),
+                    headerShown: false
+                }} />
+                <Tab.Screen
+                name="Teams"
+                component={StackDriver}
+                options={{
+                    tabBarIcon: ({ color, size }) => (
+                        <MaterialCommunityIcons name="teams" size={size} color={color} />
                     ),
                     headerShown: false
                 }} />
