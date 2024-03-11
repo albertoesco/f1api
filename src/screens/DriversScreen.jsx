@@ -43,7 +43,9 @@ const DriversScreen = () => {
                         onPress={() => navigation.navigate('DriverDetail', { item: item })} // Navega a la pantalla DriverDetail con el parámetro item
                     >
                         {/* Renderiza el componente DriverCard */}
-                        <DriverCard key={item.driver_number} item={item} />
+                        <View style={styles.cardWrapper}>
+                            <DriverCard key={item.driver_number} item={item} />
+                        </View>
                     </TouchableOpacity>
                 )}
                 onEndReachedThreshold={0}
@@ -61,7 +63,7 @@ const DriversScreen = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#0b1820', // Cambia el color de fondo aquí
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -70,6 +72,12 @@ const styles = StyleSheet.create({
         width: "100%",
         padding: 10,
         marginTop: 10
+    },
+    cardWrapper: {
+        borderWidth: 1,
+        borderColor: 'red',
+        borderRadius: 5,
+        marginBottom: 10, // Espacio entre los cards
     },
     image: {
         width: 80,
