@@ -24,7 +24,7 @@ export default function SettingsScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, // Utiliza todo el espacio disponible
+    flex: 1, // Utiliza todo espacio disponible
     resizeMode: "cover", // Ajusta la imagen para que cubra todo el contenedor
     justifyContent: "center" // Centra la imagen verticalmente
   },

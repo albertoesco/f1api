@@ -26,7 +26,7 @@ export default function DriverDetail({ route }) {
                         <Text style={styles.boldText}>Country: </Text>
                         {item.country_code}
                     </Text>
-                    {/* Agregando el nombre del equipo debajo de la foto y centrado */}
+                    {/* Agregando el nombre del equipo debajo de la foto y centrad */}
 
                     <Text style={[styles.text, styles.textOfficial]}>
                         <Text style={styles.boldText}>Number: </Text>

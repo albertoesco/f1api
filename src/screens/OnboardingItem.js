@@ -7,7 +7,7 @@ export default function OnboardingItem({ item }) {
     const { width } = useWindowDimensions();
 
     return (
-        // Contenedor principal del elemento de introducción
+        // Contenedor principal del elemento de introduccion
         <View style={[styles.container, { width }]}>
             <Image source={item.image} style={[styles.image, { width, resizeMode: 'contain' }]} />
         </View>

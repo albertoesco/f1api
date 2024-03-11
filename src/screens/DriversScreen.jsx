@@ -18,7 +18,7 @@ const DriversScreen = () => {
     const getDrivers = () => {
         getDriversByNumber() // Llama a la función getDriversByNumber del servicio f1api
             .then(json => {
-                // Crear un conjunto de identificadores de pilotos existentes
+                // Crear un conjunto de identificador de pilotos existentes
                 const existingDriverIds = new Set(drivers.map(driver => driver.driver_number));
                 // Filtrar y agregar solo los pilotos nuevos
                 const uniqueDrivers = json.filter(driver => !existingDriverIds.has(driver.driver_number));

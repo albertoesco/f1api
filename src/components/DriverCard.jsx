@@ -20,7 +20,7 @@ export default function DriverCard({ item }) {
 
 // Estilos 
 const styles = StyleSheet.create({
-  // Estilo imagen driver
+  //Estilo imagen driver
   image: {
     width: 80,
     height: 80
