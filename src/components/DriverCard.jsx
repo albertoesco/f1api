@@ -8,11 +8,8 @@ export default function DriverCard({ item }) {
       {/* Imagen driver */}
       <Image source={{ uri: item.headshot_url }} style={styles.image} resizeMode="contain" />
       {/* Contenedor info driver */}
-      <View style={[styles.column, { marginLeft: 10 }]}>
-        <Text style={[styles.text, { fontWeight: "bold", color: "white" }]}>{item.full_name}</Text>
-        <Text style={[styles.text, { color: "white" }]}>{item.team_name}</Text>
-        <Text style={[styles.text, { color: "white" }]}>{item.country_code}</Text>
-        <Text style={[styles.text, { color: "white" }]}>{item.driver_number}</Text>
+      <View style={styles.column}>
+        <Text style={[styles.text, { fontWeight: "bold", color: "white", textAlign: "center" }]}>{item.full_name}</Text>
       </View>
     </View>
   );
@@ -37,7 +34,8 @@ const styles = StyleSheet.create({
   column: {
     flex: 1,
     flexDirection: "column",
-    justifyContent: "flex-start"
+    justifyContent: "center",
+    alignItems: "center"
   },
   // Estilo texto
   text: {
