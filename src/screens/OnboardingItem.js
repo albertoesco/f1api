@@ -4,7 +4,7 @@ import React from 'react'
 // Componente funcional para mostrar un elemento en la introducción
 export default function OnboardingItem({ item }) {
     // Obtiene las dimensiones de la ventana
-    const { width } = useWindowDimensions();
+    const { width } = useWindowDimensions();//hook devuelve objeto con las dimensiones actuales
 
     return (
         // Contenedor principal del elemento de introduccion

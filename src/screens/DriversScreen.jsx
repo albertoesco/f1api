@@ -48,8 +48,8 @@ const DriversScreen = () => {
                         </View>
                     </TouchableOpacity>
                 )}
-                onEndReachedThreshold={0}
-                onEndReached={() => {
+                onEndReachedThreshold={0} //prop determina distancia lista
+                onEndReached={() => { //funcion devolucion llamada se activa llega al final
                     if (currentDriver < totalDrivers) {
                         getDrivers(currentDriver + 1); // Obtiene más pilotos cuando se alcanza el final de la lista
                         setCurrentDriver(currentDriver + 1); // Actualiza el número de piloto actual
